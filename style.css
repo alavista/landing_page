@@ -1,0 +1,200 @@
+/* ==============================
+   VARIABLES & BASE
+   ============================== */
+:root {
+  --cta-primary:        #6a1b9a;
+  --cta-primary-dark:   #4a0072;
+  --cta-primary-light:  #ebd9fc;
+
+  --cta-secondary-bg:       #fff;
+  --cta-secondary-border:   var(--cta-primary);
+  --cta-secondary-text:     var(--cta-primary);
+  --cta-secondary-hover-bg: var(--cta-primary-light);
+
+  --cta-tertiary-text:  #009688;
+  --cta-tertiary-hover: #00796b;
+
+  --footer-link:       #ebd9fc;
+  --footer-link-hover: var(--cta-primary-light);
+
+  --text-main: #333;
+  --bg-light:  #f9f9f9;
+
+  --bg-hero: url('https://via.placeholder.com/1200x800?text=Studio+Accogliente') center/cover no-repeat;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 50px; /* offset navbar */
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-main);
+}
+
+a {
+  color: var(--cta-tertiary-text);
+}
+
+a:hover,
+a:focus {
+  color: var(--cta-tertiary-hover);
+}
+
+/* ==============================
+   NAVBAR
+   ============================== */
+.navbar {
+  background: rgba(106,27,154,0.9);
+}
+.nav-link {
+  color: #fff!important;
+  margin-right: 1rem;
+  font-weight: 500;
+}
+.nav-link:hover {
+  color: var(--cta-primary-light)!important;
+}
+
+/* ==============================
+   HERO
+   ============================== */
+#hero {
+  height: 100vh;
+  background: var(--bg-hero);
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+#hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg,
+    rgba(106,27,154,0.8),
+    rgba(28,32,153,0.8));
+}
+#hero .container { position: relative; z-index: 2; }
+#hero h1 { font-size: 2.5rem; font-weight: 700; line-height: 1.2; }
+#hero p { font-size: 1.1rem; margin: 1.5rem 0; }
+
+/* ==============================
+   SVG WAVE
+   ============================== */
+.wave { line-height: 0; }
+.wave svg { display: block; width: 100%; height: 80px; }
+
+/* ==============================
+   SECTION TITLES
+   ============================== */
+.section-title {
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+}
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px; height: 4px;
+  background: var(--cta-primary);
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+/* ==============================
+   CONTENT SECTIONS
+   ============================== */
+section#services.bg-light,
+section#contact.bg-light {
+  background: var(--bg-light);
+}
+
+/* ==============================
+   ICON CARDS
+   ============================== */
+.icon-card {
+  background: #fff;
+  border: none;
+  text-align: center;
+  padding: 2rem 1rem;
+  transition: transform .3s, box-shadow .3s;
+}
+.icon-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+.icon-card i {
+  font-size: 2.5rem;
+  color: var(--cta-primary);
+  margin-bottom: 1rem;
+}
+.icon-card h4 {
+  font-weight: 600;
+  margin-bottom: .75rem;
+}
+
+/* ==============================
+   CTA-GROUP (BUTTON WRAPPER)
+   ============================== */
+.cta-group {
+  /* gap e wrapping già gestiti dalle utility di bootstrap */
+}
+
+/* ==============================
+   BUTTONS
+   ============================== */
+/* uniform size for both btn-lg */
+.btn-primary.btn-lg,
+.btn-secondary.btn-lg {
+  padding: 0.75rem 1.5rem !important;
+  font-size: 1.125rem;
+  line-height: 1.2;
+}
+
+/* Primary */
+.btn-primary {
+  background: var(--cta-primary)!important;
+  border: 1px solid var(--cta-primary)!important;
+  color: #fff!important;
+  transition: background .2s, transform .2s;
+}
+.btn-primary:hover {
+  background: var(--cta-primary-dark)!important;
+  transform: scale(1.05);
+}
+
+/* Secondary (outline) */
+.btn-secondary {
+  background: var(--cta-secondary-bg)!important;
+  border: 1px solid var(--cta-secondary-border)!important;
+  color: var(--cta-secondary-text)!important;
+  transition: background .2s;
+}
+.btn-secondary:hover {
+  background: var(--cta-secondary-hover-bg)!important;
+}
+
+/* ==============================
+   FOOTER
+   ============================== */
+footer {
+  background: var(--cta-primary);
+  color: #fff;
+  padding: 2rem 1rem;
+}
+footer a {
+  color: var(--footer-link);
+  text-decoration: none;
+}
+footer a:hover,
+footer a:focus {
+  color: #fff;
+  text-decoration: underline;
+}
