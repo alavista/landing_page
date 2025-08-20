@@ -21,7 +21,7 @@ async function sendContactMail() {
     };
 
     try {
-        const res = await fetch('http://127.0.0.1:8025/send_email', {
+        const res = await fetch('https://api.rebeccavadi.it/send_email', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(payload)
