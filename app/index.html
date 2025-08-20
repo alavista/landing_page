@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Test didattico – landing page</title>
+
+  <!-- Google Fonts & Bootstrap -->
+  <link href="bootstrap/bootstrap.min.css" rel="stylesheet"/>
+  <link href="css/style.css" rel="stylesheet"/>
+  <link href="bootstrap-icons-1.13.1/bootstrap-icons.min.css" rel="stylesheet"/>
+  <link href="aos/aos.css" rel="stylesheet"/>
+  </head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon" style="filter: invert(1)"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">Chi Sono</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Aree di competenza</a></li>
+          <li class="nav-item"><a class="nav-link" href="#location">Dove ricevo</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contattami</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container text-white" data-aos="fade-up">
+      <div class="row">
+        <div class="col-lg-7">
+          <h1>Dott.ssa <span style="white-space: nowrap">Betedda Pida</span></h1>
+          <p class="lead">Psicologa specializzata in DSA, disturbi alimentari e supporto emotivo-relazionale.</p>
+          
+          <div class="hero-cta d-flex gap-3 mt-4 justify-content-start">
+            <a href="#contact" class="btn btn-hero-primary btn-lg">Contattami</a>
+            <a href="mailto:beteddapida@gmail.com" class="btn btn-hero-outline btn-lg">Scrivi una mail</a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SVG WAVE -->
+  <div class="wave">
+    <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+      <path fill="var(--cta-primary-light)" d="M0,0 C600,100 800,0 1440,100 L1440,0 L0,0 Z"></path>
+    </svg>
+  </div>
+
+  <main>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-5">
+      <div class="container" data-aos="fade-left">
+        <h2 class="section-title">Chi Sono</h2>
+        <div class="row align-items-center">
+          <div class="col-md-4 text-center mb-4 mb-md-0">
+            <img src="img/headshot.jpg" alt="Foto Dott.ssa Betedda Pida" class="img-fluid rounded-circle"/>
+          </div>
+          <div class="col-md-8">
+            <p class="lead">
+              Laureata in Psicologia all’Università di Bologna, accompagno le persone
+              in un percorso di crescita e benessere. Creo uno spazio sicuro per
+              esplorare emozioni, potenziare risorse e superare difficoltà.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="py-5 bg-light">
+      <div class="container" data-aos="fade-right">
+        <h2 class="section-title">Aree di Competenza</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="icon-card h-100">
+              <i class="bi bi-book"></i>
+              <h3 class="h4">DSA</h3>
+              <p>Strategie mirate per affrontare difficoltà specifiche nell’apprendimento.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="icon-card h-100">
+              <i class="bi bi-fork-knife"></i>
+              <h3 class="h4">Disturbi Alimentari</h3>
+              <p>Supporto per instaurare un rapporto sano e consapevole con il cibo.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="icon-card h-100">
+              <i class="bi bi-heart"></i>
+              <h3 class="h4">Supporto Psicologico</h3>
+              <p>Consulenza per migliorare il benessere emotivo e relazionale.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATION -->
+    <section id="location" class="py-5">
+      <div class="container" data-aos="fade-left">
+        <h2 class="section-title">Dove Ricevo</h2>
+        <div class="row text-center g-4">
+          <div class="col-md-4">
+            <div class="icon-card h-100">
+              <i class="bi bi-building"></i>
+              <h3 class="h4">Strada Maggiore, Bologna</h3>
+              <a href="https://maps.app.goo.gl/JjfFW9BjM6gMXkbe6" target="_blank">Apri su Maps</a>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="icon-card h-100">
+              <i class="bi bi-house-door"></i>
+              <h3 class="h4">A Domicilio</h3>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="icon-card h-100">
+              <i class="bi bi-laptop"></i>
+              <h3 class="h4">Online</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-5 bg-light text-center" data-aos="fade-right">
+      <div class="container">
+        <h2 class="section-title">Contattami</h2>
+        <p class="mb-4">Compila il modulo oppure <a href="mailto:beteddapida@gmail.com">scrivimi una mail</a> per inviarmi un messaggio.</p>
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <form id="contactForm" class="contact-form text-start" novalidate>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="nome" class="form-label">Nome</label>
+                  <input type="text" class="form-control" id="nome" name="nome" required/>
+                </div>
+                <div class="col-md-6">
+                  <label for="cellulare" class="form-label">Cellulare</label>
+                  <input type="tel" class="form-control" id="cellulare" name="cellulare" pattern="\d{10}" maxlength="10" oninvalid="this.setCustomValidity('Inserisci il tuo numero di cellulare.')" required/>
+                </div>
+                <div class="col-12">
+                  <label for="oggetto" class="form-label">Oggetto</label>
+                  <input type="text" class="form-control" id="oggetto" name="oggetto" required/>
+                </div>
+                <div class="col-12">
+                  <label for="messaggio" class="form-label">Messaggio</label>
+                  <textarea class="form-control" id="messaggio" name="messaggio" rows="5" required></textarea>
+                </div>
+                <div class="col-12">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="privacy" required/>
+                    <label class="form-label" for="privacy">
+                      Ho preso visione della
+                      <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">privacy policy</a>.
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12 text-end">
+                  <button id="send-message" type="button" class="btn btn-primary btn-lg" onclick="sendContactMail()">
+                    Invia messaggio
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="py-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 mb-3">
+          <h4>Dott.ssa Betedda Pida, Psicologa</h4>
+          <p>Iscritta all'Ordine degli Psicologi Emilia-Romagna<br/>P.IVA 01234567890</p>
+        </div>
+        <div class="col-md-4 d-flex flex-column">
+          <a class="mb-2" href="https://www.linkedin.com/" target="_blank" rel="noopener">
+            <i class="bi bi-linkedin me-1"></i>LinkedIn
+          </a>
+          <a class="mb-2" href="https://www.ordinepsicologier.it/it/albo/" target="_blank" rel="noopener">
+            <i class="bi bi-file-text me-1"></i>Scheda Albo
+          </a>
+          <a class="btn-tertiary" href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">
+            <i class="bi bi-shield-lock me-1"></i>Privacy Policy
+          </a>
+        </div>
+      </div>
+      <p class="mt-2 small">&copy; 2025 Dott.ssa Betedda Pida</p>
+    </div>
+  </footer>
+
+  <!-- Privacy Modal -->
+  <div class="modal fade" id="privacyModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Privacy Policy</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Chiudi</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Success Modal -->
+  <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+      <div class="modal-content border-0 rounded-4 shadow-lg">
+        <div class="modal-body py-5 px-4 text-center">
+          <div class="icon-wrapper bg-success-subtle mb-4">
+            <i class="bi bi-check-circle-fill text-success fs-1"></i>
+          </div>
+          <h4 class="mb-3 fw-semibold text-dark">Messaggio inviato correttamente</h4>
+          <p class="text-secondary fs-6 mb-4">
+            La ringraziamo per avermi contattato. Le risponderemo nel più breve tempo possibile.
+          </p>
+          <button type="button" class="btn btn-success px-4" data-bs-dismiss="modal">
+            Chiudi
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Error Modal -->
+  <div class="modal fade" id="errorModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+      <div class="modal-content border-0 rounded-4 shadow-lg">
+        <div class="modal-body py-5 px-4 text-center">
+          <div class="icon-wrapper bg-danger-subtle mb-4">
+            <i class="bi bi-x-circle-fill text-danger fs-1"></i>
+          </div>
+          <h4 class="mb-3 fw-semibold text-dark">Errore nell'invio del messaggio</h4>
+          <p class="text-secondary fs-6 mb-4">
+            Si è verificato un problema durante l'invio. La preghiamo di riprovare più tardi oppure di scrivere direttamente a
+            <a href="mailto:beteddapida@gmail.com">beteddapida@gmail.com</a>.
+          </p>
+          <button type="button" class="btn btn-outline-danger px-4" data-bs-dismiss="modal">
+            Chiudi
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Scripts -->
+  <script src="bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="aos/aos.js"></script>
+  <script>
+    AOS.init({ duration: 700, once: true });
+    // auto-close navbar on click (mobile)
+    document.addEventListener('DOMContentLoaded', () => {
+      const toggler = document.querySelector('.navbar-toggler');
+      const collapseEl = document.querySelector('.navbar-collapse');
+      document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          if (getComputedStyle(toggler).display !== 'none') {
+            new bootstrap.Collapse(collapseEl).toggle();
+          }
+        });
+      });
+    });
+  </script>
+  <script src="js/script.js"></script>
+</body>
+</html>
