@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 version: "3.9"
 
 services:
@@ -24,14 +25,7 @@ services:
     image: caddy:latest
     restart: unless-stopped
     volumes:
-      - ./html:/usr/share/caddy:ro
-      - ./js:/usr/share/caddy:ro
-      - ./css:/usr/share/caddy:ro
-      - ./bootstrap:/usr/share/caddy:ro
-      - ./bootstrap-icons-1.13.1:/usr/share/caddy:ro
-      - ./aos:/usr/share/caddy:ro
-      - ./img:/usr/share/caddy:ro
-      - ./fonts:/usr/share/caddy:ro
+      - ./app:/usr/share/caddy:ro
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.static.rule=Host(`${DOMINIO}`)"
