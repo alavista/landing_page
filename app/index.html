@@ -1,286 +1,277 @@
 <!DOCTYPE html>
 <html lang="it">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Test didattico – landing page</title>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Dott.ssa Betedda Pida – Psicologa a Bologna</title>
+    
+    <!-- 3) Principi SEO: Meta Description e Open Graph -->
+    <meta name="description" content="Consulenza psicologica a Bologna e online. Dott.ssa Betedda Pida, specializzata in DSA, disturbi alimentari e supporto emotivo-relazionale.">
+    <meta property="og:title" content="Dott.ssa Betedda Pida – Psicologa a Bologna">
+    <meta property="og:description" content="Supporto psicologico specialistico per DSA e disturbi alimentari.">
+    <meta property="og:image" content="img/headshot.jpg">
 
-  <!-- Google Fonts & Bootstrap -->
-  <link href="bootstrap/bootstrap.min.css" rel="stylesheet"/>
-  <link href="css/style.css" rel="stylesheet"/>
-  <link href="bootstrap-icons-1.13.1/bootstrap-icons.min.css" rel="stylesheet"/>
-  <link href="aos/aos.css" rel="stylesheet"/>
+    <!-- 1) Precaricamento immagine principale per LCP -->
+    <link rel="preload" as="image" href="img/headshot.jpg" fetchpriority="high"/>
+
+    <!-- Bootstrap & Fogli di stile (Rimossa la risorsa bloccante bootstrap-icons) -->
+    <link href="bootstrap/bootstrap.min.css" rel="stylesheet"/>
+    <link href="aos/aos.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet"/>
   </head>
-<body>
+  <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar navbar-expand-lg fixed-top">
-    <div class="container">
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
-        <span class="navbar-toggler-icon" style="filter: invert(1)"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="mainNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#about">Chi Sono</a></li>
-          <li class="nav-item"><a class="nav-link" href="#services">Aree di competenza</a></li>
-          <li class="nav-item"><a class="nav-link" href="#location">Dove ricevo</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contattami</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+    <a href="#main-content" class="skip-link">Salta al contenuto principale</a>
 
-  <!-- HERO -->
-  <section id="hero" class="d-flex align-items-center">
-    <div class="container text-white" data-aos="fade-up">
-      <div class="row">
-        <div class="col-lg-7">
-          <h1>Dott.ssa <span style="white-space: nowrap">Betedda Pida</span></h1>
-          <p class="lead">Psicologa specializzata in DSA, disturbi alimentari e supporto emotivo-relazionale.</p>
-          
-          <div class="hero-cta d-flex gap-3 mt-4 justify-content-start">
-            <button href="#contact" class="btn btn-hero-primary btn-lg">Contattami</button>
-            <button href="mailto:beteddapida@gmail.com" class="btn btn-hero-outline btn-lg">Scrivi una mail</button>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- SVG WAVE -->
-  <div class="wave">
-    <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
-      <path fill="var(--cta-primary-light)" d="M0,0 C600,100 800,0 1440,100 L1440,0 L0,0 Z"></path>
-    </svg>
-  </div>
-
-  <main>
-
-    <!-- ABOUT -->
-    <section id="about" class="py-5">
-      <div class="container" data-aos="fade-left">
-        <h2 class="section-title">Chi Sono</h2>
-        <div class="row align-items-center">
-          <div class="col-md-4 text-center mb-4 mb-md-0">
-            <img src="img/headshot.jpg" alt="Foto Dott.ssa Betedda Pida" class="img-fluid rounded-circle"/>
-          </div>
-          <div class="col-md-8">
-            <p class="lead">
-              Laureata in Psicologia all’Università di Bologna, accompagno le persone
-              in un percorso di crescita e benessere. Creo uno spazio sicuro per
-              esplorare emozioni, potenziare risorse e superare difficoltà.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section id="services" class="py-5 bg-light">
-      <div class="container" data-aos="fade-right">
-        <h2 class="section-title">Aree di Competenza</h2>
-        <div class="row g-4">
-          <div class="col-md-4">
-            <div class="icon-card h-100">
-              <i class="bi bi-book"></i>
-              <h3 class="h4">Disturbi Specifici dell'Apprendimento</h3>
-              <p>Strategie mirate per affrontare difficoltà specifiche nell’apprendimento.</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="icon-card h-100">
-              <i class="bi bi-fork-knife"></i>
-              <h3 class="h4">Disturbi del Comportamento Alimentari</h3>
-              <p>Supporto per instaurare un rapporto sano e consapevole con il cibo.</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="icon-card h-100">
-              <i class="bi bi-heart"></i>
-              <h3 class="h4">Supporto Psicologico</h3>
-              <p>Consulenza per migliorare il benessere emotivo e relazionale.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- LOCATION -->
-    <section id="location" class="py-5">
-      <div class="container" data-aos="fade-left">
-        <h2 class="section-title">Dove Ricevo</h2>
-        <div class="row text-center g-4">
-          <div class="col-md-4">
-            <div class="icon-card h-100">
-              <i class="bi bi-building"></i>
-              <h3 class="h4">Strada Maggiore, Bologna</h3>
-              <!-- <a href="https://maps.app.goo.gl/JjfFW9BjM6gMXkbe6" target="_blank">Apri su Maps</a> -->
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="icon-card h-100">
-              <i class="bi bi-building"></i>
-              <h3 class="h4">Casalecchio di Reno</h3>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="icon-card h-100">
-              <i class="bi bi-laptop"></i>
-              <h3 class="h4">Online</h3>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="py-5 bg-light text-center" data-aos="fade-right">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
-        <h2 class="section-title">Contattami</h2>
-        <p class="mb-4">Compila il modulo oppure <a href="mailto:beteddapida@gmail.com">scrivimi una mail</a> per inviarmi un messaggio.</p>
-        <div class="row justify-content-center">
-          <div class="col-md-8">
-            <form id="contactForm" class="contact-form text-start" novalidate>
-              <div class="row g-3">
-                <div class="col-md-6">
-                  <label for="nome" class="form-label">Nome</label>
-                  <input type="text" class="form-control" id="nome" name="nome" required/>
-                </div>
-                <div class="col-md-6">
-                  <label for="cellulare" class="form-label">Cellulare</label>
-                  <input type="tel" class="form-control" id="cellulare" name="cellulare" required/>
-                </div>
-                <div class="col-12">
-                  <label for="oggetto" class="form-label">Oggetto</label>
-                  <input type="text" class="form-control" id="oggetto" name="oggetto" required/>
-                </div>
-                <div class="col-12">
-                  <label for="messaggio" class="form-label">Messaggio</label>
-                  <textarea class="form-control" id="messaggio" name="messaggio" rows="5" required></textarea>
-                </div>
-                <div class="col-12">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="privacy" required/>
-                    <label class="form-label" for="privacy">
-                      Ho preso visione della
-                      <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">privacy policy</a>.
-                    </label>
-                  </div>
-                </div>
-                <div class="col-12 text-end">
-                  <button id="send-message" type="button" class="btn btn-primary btn-lg" onclick="sendContactMail()">
-                    Invia messaggio
-                  </button>
-                </div>
-              </div>
-            </form>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Attiva/Disattiva navigazione">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#about">Chi Sono</a></li>
+            <li class="nav-item"><a class="nav-link" href="#services">Aree di competenza</a></li>
+            <li class="nav-item"><a class="nav-link" href="#location">Dove ricevo</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contattami</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero">
+      <div class="container text-white" data-aos="fade-up">
+        <div class="row">
+          <div class="col-lg-7">
+            <h1>Dott.ssa <span style="white-space: nowrap">Betedda Pida</span></h1>
+            <p class="lead">Psicologa specializzata in DSA, disturbi alimentari e supporto emotivo-relazionale.</p>
+
+            <div class="hero-cta d-flex gap-3 mt-4 justify-content-start">
+              <a href="mailto:beteddapida@gmail.com?subject=Richiesta%20di%20informazioni" class="btn btn-hero-primary btn-lg">Contattami</a>
+            </div>
           </div>
         </div>
       </div>
     </section>
-  </main>
 
-  <!-- FOOTER -->
-  <footer class="py-4">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-8 mb-3">
-          <h4>Dott.ssa Betedda Pida, Psicologa</h4>
-          <p>Iscritta all'Ordine degli Psicologi Emilia-Romagna<br/>P.IVA 01234567890</p>
-        </div>
-        <div class="col-md-4 d-flex flex-column">
-          <a class="mb-2" href="https://www.linkedin.com/" target="_blank" rel="noopener">
-            <i class="bi bi-linkedin me-1"></i>LinkedIn
-          </a>
-          <a class="mb-2" href="https://www.ordinepsicologier.it/it/albo/" target="_blank" rel="noopener">
-            <i class="bi bi-file-text me-1"></i>Scheda Albo
-          </a>
-          <a class="btn-tertiary" href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">
-            <i class="bi bi-shield-lock me-1"></i>Privacy Policy
-          </a>
-        </div>
-      </div>
-      <p class="mt-2 small">&copy; 2025 Dott.ssa Betedda Pida</p>
+    <!-- SVG WAVE -->
+    <div class="wave">
+      <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+        <path fill="var(--cta-primary-light)" d="M0,0 C600,100 800,0 1440,100 L1440,0 L0,0 Z"></path>
+      </svg>
     </div>
-  </footer>
 
-  <!-- Privacy Modal -->
-  <div class="modal fade" id="privacyModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Privacy Policy</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body"></div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Chiudi</button>
-        </div>
-      </div>
-    </div>
-  </div>
+    <main id="main-content">
 
-  <!-- Success Modal -->
-  <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-md">
-      <div class="modal-content border-0 rounded-4 shadow-lg">
-        <div class="modal-body py-5 px-4 text-center">
-          <div class="icon-wrapper bg-success-subtle mb-4">
-            <i class="bi bi-check-circle-fill text-success fs-1"></i>
+      <!-- ABOUT -->
+      <section id="about" class="py-5">
+        <div class="container" data-aos="fade-left">
+          <h2 class="section-title">Chi Sono</h2>
+          <div class="row align-items-center">
+            <div class="col-md-4 text-center mb-4 mb-md-0">
+              <!-- Aggiunte dimensioni esplicite per evitare CLS -->
+              <img src="img/headshot.jpg" alt="Foto Dott.ssa Betedda Pida" class="img-fluid rounded-circle" width="300" height="300"/>
+            </div>
+            <div class="col-md-8">
+              <p class="lead">
+                <!-- 4) Corretto mix linguistico "resources" -> "risorse" -->
+                Laureata in Psicologia all’Università di Bologna, accompagno le persone
+                in un percorso di crescita e benessere. Creo uno spazio sicuro per
+                esplorare emozioni, potenziare le risorse e superare difficoltà.
+              </p>
+            </div>
           </div>
-          <h4 class="mb-3 fw-semibold text-dark">Messaggio inviato correttamente</h4>
-          <p class="text-secondary fs-6 mb-4">
-            La ringraziamo per avermi contattato. Le risponderemo nel più breve tempo possibile.
-          </p>
-          <button type="button" class="btn btn-success px-4" data-bs-dismiss="modal">
-            Chiudi
-          </button>
         </div>
-      </div>
-    </div>
-  </div>
+      </section>
 
-  <!-- Error Modal -->
-  <div class="modal fade" id="errorModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-md">
-      <div class="modal-content border-0 rounded-4 shadow-lg">
-        <div class="modal-body py-5 px-4 text-center">
-          <div class="icon-wrapper bg-danger-subtle mb-4">
-            <i class="bi bi-x-circle-fill text-danger fs-1"></i>
+      <!-- SERVICES -->
+      <section id="services" class="py-5 bg-light">
+        <div class="container" data-aos="fade-right">
+          <h2 class="section-title">Aree di Competenza</h2>
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="icon-card h-100">
+                <!-- 2) Icona vettoriale inline bi-book -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-person-heart mb-3" viewBox="0 0 16 16" aria-hidden="true">
+                  <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783"/>
+                </svg>
+                <h3 class="h4">Disturbi Specifici dell'Apprendimento</h3>
+                <!-- 4) Corretto refuso "appenedimento" -> "apprendimento" -->
+                <p>Strategie mirate per affrontare difficoltà specifiche nell’apprendimento.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="icon-card h-100">
+                <!-- 2) Icona vettoriale inline bi-person-heart -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-person-heart mb-3" viewBox="0 0 16 16" aria-hidden="true">
+                  <path d="M9 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm-9 8c0 1 1 1 1 1h12s1 0 1-1-1-4-7-4-7 3-7 4Zm13.5-8.09c1.387-1.425 4.855 1.07 0 4.277-4.854-3.207-1.387-5.702 0-4.276Z"/>
+                </svg>
+                <h3 class="h4">Disturbi del Comportamento Alimentare</h3>
+                <p>Supporto per instaurare un rapporto sano e consapevole con se stessi e il proprio corpo.</p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="icon-card h-100">
+                <!-- 2) Icona vettoriale inline bi-heart -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-heart mb-3" viewBox="0 0 16 16" aria-hidden="true">
+                  <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                </svg>
+                <h3 class="h4">Supporto Psicologico</h3>
+                <p>Consulenza per migliorare il benessere emotivo e relazionale.</p>
+              </div>
+            </div>
           </div>
-          <h4 class="mb-3 fw-semibold text-dark">Errore nell'invio del messaggio</h4>
-          <p class="text-secondary fs-6 mb-4">
-            Si è verificato un problema durante l'invio. La preghiamo di riprovare più tardi oppure di scrivere direttamente a
-            <a href="mailto:beteddapida@gmail.com">beteddapida@gmail.com</a>.
-          </p>
-          <button type="button" class="btn btn-outline-danger px-4" data-bs-dismiss="modal">
-            Chiudi
-          </button>
         </div>
+      </section>
+
+      <!-- LOCATION -->
+      <section id="location" class="py-5">
+        <div class="container" data-aos="fade-left">
+          <h2 class="section-title">Dove Ricevo</h2>
+          <div class="row text-center g-4">
+            <div class="col-md-6 col-lg-3">
+              <div class="icon-card h-100">
+                <!-- 2) Icona vettoriale inline bi-building -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-building mb-3" viewBox="0 0 16 16" aria-hidden="true">
+                  <path d="M4 2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1ZM4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1ZM4 8.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1ZM4 11.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Z"/>
+                  <path d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V1Zm11 0H3v14h3v-2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V15h3V1Z"/>
+                </svg>
+                <h3 class="h4">Bologna</h3>
+                <p class="fs-5 text">Strada Maggiore, 94</p>
+                <p><a href="https://maps.app.goo.gl/yE3TD1CBe9pspBDN9" target="_blank" rel="noopener">Apri su Google Maps</a></p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="icon-card h-100">
+                <!-- 2) Icona vettoriale inline bi-building -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-building mb-3" viewBox="0 0 16 16" aria-hidden="true">
+                  <path d="M4 2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1ZM4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1ZM4 8.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1ZM4 11.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Z"/>
+                  <path d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V1Zm11 0H3v14h3v-2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V15h3V1Z"/>
+                </svg>
+                <h3 class="h4">Bologna</h3>
+                <p class="fs-5 text">Via dell'Artigiano, 4</p>
+                <p><a href="https://maps.app.goo.gl/ynG6Nky8GDVwNBe8A" target="_blank" rel="noopener">Apri su Google Maps</a></p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="icon-card h-100">
+                <!-- 2) Icona vettoriale inline bi-building -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-building mb-3" viewBox="0 0 16 16" aria-hidden="true">
+                  <path d="M4 2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1ZM4 5.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1ZM4 8.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1ZM4 11.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1Zm3.5-.5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h1a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-1Z"/>
+                  <path d="M2 1a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V1Zm11 0H3v14h3v-2.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5V15h3V1Z"/>
+                </svg>
+                <h3 class="h4">Casalecchio di Reno</h3>
+                <p class="fs-5 text">Via Mazzini, 59</p>
+                <p><a href="https://maps.app.goo.gl/dhhqDFCpDzhQ5z739" target="_blank" rel="noopener">Apri su Google Maps</a></p>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="icon-card h-100">
+                <!-- 2) Icona vettoriale inline bi-laptop -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-laptop mb-3" viewBox="0 0 16 16" aria-hidden="true">
+                  <path d="M13.5 3a.5.5 0 0 1 .5-.5V11H2V3.5a.5.5 0 0 1 .5-.5h11zm-11-1A1.5 1.5 0 0 0 1 3.5V12h14V3.5A1.5 1.5 0 0 0 13.5 2h-11zM0 12.5h16a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 12.5z"/>
+                </svg>
+                <h3 class="h4">Online</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="py-5 bg-light text-center" data-aos="fade-right">
+        <div class="container">
+          <h2 class="section-title">Contattami</h2>
+          <p class="mb-4">
+            Per qualsiasi informazione o per fissare un primo colloquio, scrivimi
+            direttamente via email.
+          </p>
+          <a href="mailto:beteddapida@gmail.com?subject=Richiesta%20di%20informazioni" class="btn btn-primary btn-lg">
+          Scrivimi un'email
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <!-- FOOTER -->
+    <footer class="py-4">
+
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 mb-3">
+            <h4>Dott.ssa Betedda Pida, Psicologa</h4>
+            <p class="mb-0">Email: <a href="mailto:beteddapida@gmail.com?subject=Richiesta%20di%20informazioni">beteddapida@gmail.com</a></p>
+            <p class="mb-0">Iscritta all'Ordine degli Psicologi Emilia-Romagna</p>
+            <p class="mb-0">P.IVA 01234567890</p>
+          </div>
+          <div class="col-md-4 d-flex flex-column">
+            <a class="mb-2 d-inline-flex align-items-center" href="https://www.linkedin.com/" target="_blank" rel="noopener">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin me-2" viewBox="0 0 16 16">
+                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+              </svg>
+              <span>LinkedIn</span>
+            </a>
+            
+            <a class="mb-2 d-inline-flex align-items-center" href="https://www.ordinepsicologier.it/it/albo/" target="_blank" rel="noopener">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-text-fill me-2" viewBox="0 0 16 16">
+                <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2M5 4h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1m-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5M5 8h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1m0 2h3a.5.5 0 0 1 0 1H5a.5.5 0 0 1 0-1"/>
+              </svg>
+              <span>Scheda Albo</span>
+            </a>
+            
+            <a class="mb-2 d-inline-flex align-items-center" id="openPrivacy">
+              <!-- Geometria bi-shield-lock corretta e ridimensionamento pulito in em -->
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shield-lock-fill me-2" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.465 9.99a11.8 11.8 0 0 0 2.517 2.453c.386.273.744.482 1.048.625.28.132.581.24.829.24s.548-.108.829-.24a7 7 0 0 0 1.048-.625 11.8 11.8 0 0 0 2.517-2.453c1.678-2.195 3.061-5.513 2.465-9.99a1.54 1.54 0 0 0-1.044-1.263 63 63 0 0 0-2.887-.87C9.843.266 8.69 0 8 0m0 5a1.5 1.5 0 0 1 .5 2.915l.385 1.99a.5.5 0 0 1-.491.595h-.788a.5.5 0 0 1-.49-.595l.384-1.99A1.5 1.5 0 0 1 8 5"/>
+              </svg>
+              <span>Privacy Policy</span>
+            </a>
+          </div>
+        </div>
+        <p class="mt-2 small mb-0 text-center">© 2026 Dott.ssa Betedda Pida</p>
       </div>
-    </div>
-  </div>
+    </footer>
 
+    <!-- DIALOG PRIVACY POLICY -->
+    <dialog id="privacyDialog">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h2 class="h4 mb-0">Informativa sulla Privacy</h2>
+        <button type="button" class="btn-close" id="closePrivacy" aria-label="Chiudi"></button>
+      </div>
+      <div style="max-height: 60vh; overflow-y: auto; font-size: 0.9rem; color: #555;">
+        <p><strong>1. Titolare del Trattamento</strong><br>
+          Dott.ssa Betedda Pida, Psicologa, iscritta all'Ordine degli Psicologi dell'Emilia-Romagna (Sez. A, Num. 99999). P.IVA 01234567890.<br>
+          <!-- 4) Uniformato indirizzo "Strada Maggiore, 94" con sezione Location -->
+          <strong>Sede legale/Studio:</strong> Strada Maggiore, 94, 40125 Bologna (BO)<br>
+          <strong>Email:</strong> beteddapida@gmail.com | <strong>PEC:</strong> beteddapida.psico@pec.it</p>
 
-  <!-- Scripts -->
-  <script src="bootstrap/bootstrap.bundle.min.js"></script>
-  <script src="aos/aos.js"></script>
-  <script>
-    AOS.init({ duration: 700, once: true });
-    // auto-close navbar on click (mobile)
-    document.addEventListener('DOMContentLoaded', () => {
-      const toggler = document.querySelector('.navbar-toggler');
-      const collapseEl = document.querySelector('.navbar-collapse');
-      document.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-          if (getComputedStyle(toggler).display !== 'none') {
-            new bootstrap.Collapse(collapseEl).toggle();
-          }
-        });
-      });
-    });
-  </script>
-  <script src="js/script.js"></script>
-</body>
+          <p><strong>2. Tipologia di Dati Trattati e Finalità</strong><br>
+          • <strong>Dati di navigazione:</strong> I sistemi informatici dell'hosting (OVHCloud, server in Francia) registrano automaticamente alcuni dati (es. indirizzo IP, browser utilizzato) per garantire la sicurezza del sito e prevenire frodi. Base giuridica: legittimo interesse del Titolare.<br>
+          • <strong>Dati forniti volontariamente:</strong> L'invio facoltativo di email all'indirizzo del Titolare comporta l'acquisizione dell'indirizzo del mittente e degli eventuali dati inseriti nel messaggio, utilizzati esclusivamente per rispondere alla richiesta. Base giuridica: esecuzione di misure precontrattuali o consenso dell'interessato.</p>
+
+          <p><strong>3. Natura del conferimento</strong><br>
+          Il conferimento dei dati per l'invio di email è facoltativo. Il mancato conferimento comporta l'impossibilità di ricevere risposta.</p>
+
+          <p><strong>4. Modalità di Trattamento e Conservazione</strong><br>
+          I dati sono trattati con strumenti informatici protetti e conservati per il tempo strettamente necessario a riscontrare le richieste, o secondo i termini di legge in caso di successiva instaurazione di un rapporto clinico.</p>
+
+          <p><strong>5. Diritti dell'Interessato</strong><br>
+          L'utente può richiedere in ogni momento l'accesso ai dati, la rettifica, la cancellazione o la limitazione del trattamento scrivendo all'indirizzo email del Titolare. Ha inoltre il diritto di proporre reclamo al Garante Privacy.</p>
+
+          <p><strong>6. Cookie</strong><br>
+          Questo sito è una landing page statica e non utilizza cookie di profilazione, tracciamento o marketing, né cookie tecnici di terze parti.</p>
+      </div>
+      <div class="text-end mt-3">
+        <button type="button" class="btn btn-primary btn-sm" id="closePrivacyBtn">Chiudi</button>
+      </div>
+    </dialog>
+
+    <!-- Scripts -->
+    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="aos/aos.js"></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>

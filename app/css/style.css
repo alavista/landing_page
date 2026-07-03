@@ -3,11 +3,10 @@
   --cta-primary-dark: #4a0072;
   --cta-primary-light: #ebd9fc;
   --cta-secondary-border: var(--cta-primary);
-  --cta-tertiary-text: #009688;
+  --cta-tertiary-text: #8e24aa; 
   --footer-link: #ebd9fc;
   --text-main: #333;
   --bg-light: #f9f9f9;
-  --bg-hero: url('img/headshot.webp') center/cover no-repeat;
 }
 
 @font-face {
@@ -32,38 +31,63 @@
 * { box-sizing: border-box; }
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 70px; /* Maggiore spazio per compensare shift dinamici */
+  scroll-padding-top: 70px;
   overflow-x: hidden;
 }
 
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--cta-primary-dark);
+  color: white;
+  padding: 8px;
+  z-index: 100;
+  transition: top 0.2s;
+}
+.skip-link:focus {
+  top: 0;
+}
+
 body { margin: 0; font-family: 'Poppins',sans-serif; color: var(--text-main); }
-a { color: var(--cta-tertiary-text); }
+
+a { color: var(--cta-tertiary-text); text-decoration: none; }
 a:hover, a:focus-visible {
-  color: #005a6e;
+  color: var(--cta-primary-dark);
   text-decoration: underline;
   outline: none;
 }
 
 /* Navbar */
-.navbar { background: rgba(106,27,154,0.9); }
+.navbar { background: rgba(106,27,154,0.95); }
 .nav-link { color: #fff!important; font-weight: 700; margin-right: 1rem; }
+.nav-link:hover { text-decoration: underline; }
 
 /* Hero */
 #hero {
-  height: 100vh;
+  min-height: 100vh;
+  min-height: 100dvh;
   background: var(--bg-hero);
   position: relative;
   display: flex;
   align-items: center;
-  color: #2d2340; /* testo scuro per contrasto */
-  text-shadow: none;
+  color: #2d2340;
+  padding: 100px 0;
+  z-index: 1; /* Isolamento contesto grafico globale */
 }
 #hero::before {
   content: '';
   position: absolute;
   inset: 0;
-  /* Sfumatura lilla */
   background: linear-gradient(135deg, rgba(220,190,255,0.85) 0%, rgba(200,160,230,0.8) 50%, rgba(170,130,200,0.85) 100%);
+  z-index: 2; /* Posizionamento esplicito sotto il testo */
+  pointer-events: none; /* Impedisce all'overlay di bloccare click e selezioni */
+}
+
+/* Forza il contenitore in primo piano hardware rispetto al gradiente */
+#hero .container {
+  position: relative;
+  z-index: 3;
 }
 
 #hero h1 {
@@ -71,17 +95,19 @@ a:hover, a:focus-visible {
   font-weight: 500;
   margin-bottom: 1rem;
   color: #2d2340;
-  text-shadow: none;
+  -webkit-font-smoothing: antialiased; /* Ottimizzazione rendering font su mobile */
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
-#hero p.lead {
-  color: #2d2340;
-  text-shadow: none;
+#hero p.lead { 
+  color: #2d2340; 
+  -webkit-font-smoothing: antialiased; /* Ottimizzazione rendering font su mobile */
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
-/* Wave */
 .wave svg { display: block; width: 100%; height: 80px; }
 
-/* Section titles */
 .section-title {
   text-align: center;
   font-weight: 700;
@@ -98,23 +124,24 @@ a:hover, a:focus-visible {
   border-radius: 2px;
 }
 
-/* Background */
-.bg-light { background: var(--bg-light); }
+/* Background Utility */
+.bg-light { background-color: var(--bg-light)!important; }
 
-/* Icon cards */
 .icon-card {
   background: #fff;
   padding: 2rem 1rem;
   text-align: center;
+  border: 1px solid rgba(106,27,154,0.08);
+  border-radius: 0.5rem;
   transition: transform .3s, box-shadow .3s;
 }
 .icon-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 20px rgba(106,27,154,0.1);
 }
 .icon-card i { font-size: 2.5rem; color: var(--cta-primary); margin-bottom: 1rem; }
 
-/* Buttons */
+/* Bottoni ed Effetti Hover */
 .btn-primary {
   background: var(--cta-primary)!important;
   border: 2px solid var(--cta-primary)!important;
@@ -126,26 +153,17 @@ a:hover, a:focus-visible {
   letter-spacing: 0.01em;
   box-shadow: 0 4px 16px rgba(76,34,120,0.10);
   transition: background .18s, color .18s, border .18s, box-shadow .18s;
+  text-decoration: none!important;
 }
 .btn-primary:hover,
 .btn-primary:focus-visible {
-  background: var(--cta-primary-dark)!important;
-  color: #fff!important;
-  border-color: var(--cta-primary-dark)!important;
+  background: #fff!important;
+  color: var(--cta-primary)!important;
+  border-color: var(--cta-primary)!important;
   box-shadow: 0 8px 24px rgba(76,34,120,0.18);
   outline: none;
 }
 
-.btn,
-.btn-primary,
-.btn-success,
-.btn-outline-danger,
-.btn-hero-primary,
-.btn-hero-outline {
-  font-weight: 600 !important;
-}
-
-/* Hero CTA Buttons - stile sobrio e accessibile */
 .hero-cta .btn-hero-primary {
   background: var(--cta-primary-dark) !important;
   color: #fff !important;
@@ -157,37 +175,31 @@ a:hover, a:focus-visible {
   letter-spacing: 0.01em;
   box-shadow: 0 4px 16px rgba(76,34,120,0.10);
   transition: background .18s, color .18s, border .18s, box-shadow .18s;
+  text-decoration: none!important;
 }
 .hero-cta .btn-hero-primary:hover,
 .hero-cta .btn-hero-primary:focus-visible {
-  background: var(--cta-primary) !important;
-  color: #fff !important;
-  border-color: var(--cta-primary) !important;
+  background: #fff !important;
+  color: var(--cta-primary-dark) !important;
+  border-color: var(--cta-primary-dark) !important;
   box-shadow: 0 8px 24px rgba(76,34,120,0.18);
   outline: none;
 }
-.hero-cta .btn-hero-outline {
-  background: #fff !important;
-  color: var(--cta-primary-dark) !important;
-  border: 2px solid var(--cta-primary-dark) !important;
-  border-radius: 0.6rem;
-  font-weight: 600;
-  padding: 0.7rem 2rem;
-  font-size: 1.15rem;
-  letter-spacing: 0.01em;
-  box-shadow: 0 2px 8px rgba(76,34,120,0.08);
-  transition: background .18s, color .18s, border .18s, box-shadow .18s;
-}
-.hero-cta .btn-hero-outline:hover,
-.hero-cta .btn-hero-outline:focus-visible {
-  background: var(--cta-primary-light) !important;
-  color: var(--cta-primary-dark) !important;
-  border-color: var(--cta-primary) !important;
-  box-shadow: 0 6px 18px rgba(76,34,120,0.12);
-  outline: none;
-}
 
-/* Footer */
+.btn, .btn-primary { font-weight: 600 !important; }
+
+.footer-policy-link {
+  color: var(--footer-link);
+  text-decoration: none;
+  background: none;
+  border: none;
+  padding: 0;
+  text-align: left;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.footer-policy-link:hover { color: #fff; text-decoration: underline; }
+
 footer {
   background: var(--cta-primary);
   color: #fff;
@@ -196,57 +208,32 @@ footer {
 footer a { color: var(--footer-link); text-decoration: none; }
 footer a:hover { color: #fff; text-decoration: underline; }
 
-/* Contact form */
-.contact-form {
-  background: #fff;
-  padding: 2rem;
-  border-radius: 8px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-}
-.contact-form .form-label { font-weight: 500; }
-.contact-form .form-control {
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  padding: .75rem;
-  transition: border-color .2s, box-shadow .2s;
-}
-.contact-form .form-control:focus {
-  border-color: var(--cta-primary);
-  box-shadow: 0 0 0 .2rem rgba(106,27,154,0.25);
-}
-
-/* Paragrafi */
-.section-description p,
-#contact p {
-  font-size: 1.125rem; /* 18px */
+.section-description p, #contact p {
+  font-size: 1.125rem;
   line-height: 1.8;
   color: #333;
 }
 
-/* Modali eleganti e coerenti */
-.modal-md .modal-content {
-  max-width: 480px;
-  margin: auto;
+/* Dialog Privacy */
+dialog {
+  border: none;
+  border-radius: 0.8rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  max-width: 600px;
+  width: 90%;
+  padding: 2rem;
+}
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
 }
 
-.icon-wrapper {
-  width: 72px;
-  height: 72px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-}
-
-.bg-success-subtle {
-  background-color: #e6f4ea;
-}
-
-.bg-danger-subtle {
-  background-color: #fbeaea;
-}
-
-.text-secondary {
-  color: #6c757d;
+/*Add this strict override at the very bottom of your css/style.css file. If JavaScript fails or tells AOS to shut off, this snippet guarantees that all content elements immediately snap to full visibility (opacity: 1) and become selectable/clickable:*/
+@media (prefers-reduced-motion: reduce) {
+  [data-aos] {
+    position: static !important;
+    transform: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+  }
 }
